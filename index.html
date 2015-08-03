@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Financial Stock Calculator">
+		<meta name="keywords" content="financial stock calculator">
+		<meta name="author" content="Lukas Rascius">
+		<title>Stock Calculator</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+        <div class="container">
+            <div id="section"> 
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="inputrow">
+                                <label>Initial Share Price</label>
+                                <input type="number" onChange="calculate()" step="any" min="0" id="initialprice" placeholder="0.00" value="0">
+                            </div>
+                            <div class="inputrow">
+                                <label>Final Share Price</label>
+                                <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                            </div>        
+                            <div class="inputrow">
+                                <label>Final Share Price</label>
+                                <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                            </div> 
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="profit_percent"></label>
+                    </div>                
+                </div>
+             </div> 
+        </div>
+        
+        <!-- JavaScript on the bottom for faster page loading -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/custom.js"></script>
+	</body>
+</html>
+
+
+
+
