@@ -2,6 +2,9 @@ $(document).ready(function () {
     calculate();
 });
 
+$('#responsiveTabsDemo').responsiveTabs({
+    startCollapsed: 'accordion'
+});
 
 function calculate()
 {
