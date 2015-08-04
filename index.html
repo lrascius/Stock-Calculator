@@ -18,6 +18,7 @@
                 <li><a href="#tab-1"> Stock Profit </a></li>
                 <li><a href="#tab-2"> Earnings </a></li>
             </ul>
+            <!-- Stock Profit Tab -->
             <div id="tab-1">
                 <div id="section"> 
                     <div class="row">
@@ -42,8 +43,36 @@
                         </div>                
                     </div>
                  </div>
-                
-             </div> 
+            </div>
+            <!-- End of Stock Profit Tab -->
+            
+            <!-- Earnings Tab -->
+            <div id="tab-2">
+                <div id="section"> 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form>
+                                <div class="inputrow">
+                                    <label>Initial Share Price</label>
+                                    <input type="number" onChange="calculate()" step="any" min="0" id="initialprice" placeholder="0.00" value="0">
+                                </div>
+                                <div class="inputrow">
+                                    <label>Number of Shares</label>
+                                    <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                </div>        
+                                <div class="inputrow">
+                                    <label>Interval</label>
+                                    <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                </div> 
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="profit_percent"></label>
+                        </div>                
+                    </div>
+                 </div>
+            </div>
+            <!-- End of Earnings tab-->
             
             
         </div>    
