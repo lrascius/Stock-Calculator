@@ -25,26 +25,32 @@
                         <div class="col-md-6">
                             <form>
                                 <div class="inputrow">
+                                    <label>Allotment</label>
+                                    <input type="number" onChange="calculateProfit()" step="1" min="0" id="allotment" placeholder="0" value="0">
+                                </div>                                 
+                                <div class="inputrow">
                                     <label>Initial Share Price</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="initialprice" placeholder="0.00" value="0">
+                                    <input type="number" onChange="calculateProfit()" step="any" min="0" id="initialprice" placeholder="0.00" value="0">
                                 </div>
                                 <div class="inputrow">
-                                    <label>Number of Shares</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
-                                </div> 
-                                <div class="inputrow">
-                                    <label>Commission</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                    <label>Buy Commission</label>
+                                    <input type="number" onChange="calculateProfit()" step="any" min="0" id="buycommision" placeholder="0.00" value="0">
                                 </div>        
                                 <div class="inputrow">
                                     <label>Final Share Price</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                    <input type="number" onChange="calculateProfit()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                </div> 
+                                <div class="inputrow">
+                                    <label>Sell Commission</label>
+                                    <input type="number" onChange="calculateProfit()" step="any" min="0" id="sellcommision" placeholder="0.00" value="0">
                                 </div> 
                             </form>
                         </div>
                         <div class="col-md-6">
-                            <label for="profit_percent"></label>
-                            <label for="profit_dollars"></label>
+                            <label for="marketvalue"></label>
+                            <label for="cost"></label>
+                            <label for="netprofit"></label>
+                            <label for="returnoninvestment"></label>
                         </div>                
                     </div>
                  </div>
@@ -58,16 +64,24 @@
                         <div class="col-md-6">
                             <form>
                                 <div class="inputrow">
+                                    <label>Allotment</label>
+                                    <input type="number" onChange="calculateEarnings()" step="1" min="0" id="allotment2" placeholder="0" value="0">
+                                </div>  
+                                <div class="inputrow">
                                     <label>Initial Share Price</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="initialprice" placeholder="0.00" value="0">
+                                    <input type="number" onChange="calculateEarnings()" step="any" min="0" id="initialprice2" placeholder="0.00" value="0">
                                 </div>
                                 <div class="inputrow">
-                                    <label>Number of Shares</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="shares" placeholder="0.00" value="0">
-                                </div>        
+                                    <label>Buy Commision</label>
+                                    <input type="number" onChange="calculateEarnings()" step="any" min="0" id="buycommision2" placeholder="0.00" value="0">
+                                </div>
                                 <div class="inputrow">
-                                    <label>Interval</label>
-                                    <input type="number" onChange="calculate()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                    <label>Profit Price</label>
+                                    <input type="number" onChange="calculateEarnings()" step="any" min="0" id="price" placeholder="0.00" value="0">
+                                </div> 
+                                 <div class="inputrow">
+                                    <label>Number</label>
+                                    <input type="number" onChange="calculateEarnings()" step="any" min="0" id="number" placeholder="0.00" value="0">
                                 </div> 
                             </form>
                         </div>
