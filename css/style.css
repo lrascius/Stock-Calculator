@@ -27,10 +27,22 @@ label {
 input {
     font-size: 20px;
     border-radius: 5px;
+}
+
+.row {
+    height: 250px; 
+}
+
+.row #earningstab {
+    height: 250px;
+    overflow: auto;
+}
+
+.resultlabels {
     float: left;
 }
 
-/* CSS for Responsive Tabs */
+/* CSS for Responsive Tabs */    
 
 /* Tabs container */
 .r-tabs {
