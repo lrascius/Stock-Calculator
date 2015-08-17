@@ -76,12 +76,14 @@ function calculateEarnings()
     var number = $("#number").val();
     
     var cost = allotment * initialprice + parseFloat(buycommision) + parseFloat(sellcommision);
-    
-    for(var i = 1; i <= number; i++)
+    if(allotment != 0)
     {
-        var marketvalue = i*price + cost;
-        var $label = $("<label class='pricelabels'>").text("Profit of " + accounting.formatMoney(i*price) + ": Sell at " + accounting.formatMoney(marketvalue / allotment));
-        $('#earningstab').append($label);
+        for(var i = 1; i <= number; i++)
+        {
+            var marketvalue = i*price + cost;
+            var $label = $("<label class='pricelabels'>").text("Profit of " + accounting.formatMoney(i*price) + ": " + accounting.formatMoney(marketvalue / allotment));
+            $('#earningstab').append($label);
+        }
     }
 }
 
