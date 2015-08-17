@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Financial Stock Calculator">
+		<meta name="keywords" content="financial stock calculator">
+		<meta name="author" content="Lukas Rascius">
+		<title>Stock Calculator</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/responsive-tabs.css">
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+        <div class="container">
+            <div id="responsiveTabsDemo">
+                <ul>
+                    <li><a href="#tab-1"> Stock Profit </a></li>
+                    <li><a href="#tab-2"> Potential Profits/Losses </a></li>
+                </ul>
+                <!-- Stock Profit Tab -->
+                <div id="tab-1">
+                    <div id="section"> 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="inputrow">
+                                        <label>Allotment</label>
+                                        <input type="number" onChange="calculateProfit()" step="1" min="0" id="allotment" placeholder="0" value="0">
+                                    </div>                                 
+                                    <div class="inputrow">
+                                        <label>Initial Share Price</label>
+                                        <input type="number" onChange="calculateProfit()" step="any" min="0" id="initialprice" placeholder="0.00" value="0">
+                                    </div>
+                                    <div class="inputrow">
+                                        <label>Buy Commission</label>
+                                        <input type="number" onChange="calculateProfit()" step="any" min="0" id="buycommision" placeholder="0.00" value="4.95">
+                                    </div>        
+                                    <div class="inputrow">
+                                        <label>Final Share Price</label>
+                                        <input type="number" onChange="calculateProfit()" step="any" min="0" id="finalprice" placeholder="0.00" value="0">
+                                    </div> 
+                                    <div class="inputrow">
+                                        <label>Sell Commission</label>
+                                        <input type="number" onChange="calculateProfit()" step="any" min="0" id="sellcommision" placeholder="0.00" value="4.95">
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="resultrow">
+                                    <label>Market Value: </label>
+                                    <label class="resultlabels "for="marketvalue"></label>
+                                </div>
+                                <div class="resultrow">
+                                    <label>Cost: </label>
+                                    <label class="resultlabels" for="cost"></label>
+                                </div>
+                                <div class="resultrow">
+                                    <label>Net Profit: </label>
+                                    <label class="posneg resultlabels" for="netprofit"></label>
+                                </div>
+                                <div class="resultrow">
+                                    <label>Return on Investment: </label>
+                                    <label class="posneg resultlabels" for="returnoninvestment"></label>
+                                </div>
+                            </div>                
+                        </div>
+                     </div>
+                </div>
+                <!-- End of Stock Profit Tab -->
+
+                <!-- Earnings Tab -->
+                <div id="tab-2">
+                    <div id="section"> 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="inputrow">
+                                        <label>Allotment</label>
+                                        <input type="number" onChange="calculateEarnings()" step="1" min="0" id="allotment2" placeholder="0" value="0">
+                                    </div>  
+                                    <div class="inputrow">
+                                        <label>Initial Share Price</label>
+                                        <input type="number" onChange="calculateEarnings()" step="any" min="0" id="initialprice2" placeholder="0.00" value="0">
+                                    </div>
+                                    <div class="inputrow">
+                                        <label>Buy Commision</label>
+                                        <input type="number" onChange="calculateEarnings()" step="any" min="0" id="buycommision2" placeholder="0.00" value="4.95">
+                                    </div>
+                                    <div class="inputrow">
+                                        <label>Sell Commision</label>
+                                        <input type="number" onChange="calculateEarnings()" step="any" min="0" id="sellcommision2" placeholder="0.00" value="4.95">
+                                    </div>
+                                    <div class="inputrow">
+                                        <label>Interval Size</label>
+                                        <input type="number" onChange="calculateEarnings()" step="any" min="0" id="price" placeholder="0.00" value="0">
+                                    </div> 
+                                     <div class="inputrow">
+                                        <label>Number of Intervals</label>
+                                        <input type="number" onChange="calculateEarnings()" step="any" min="0" id="number" placeholder="0" value="1">
+                                    </div>
+                                    <label>Profit/Loss</label>
+                                    <select>
+                                        <option value="profit">Profit</option>
+                                        <option value="loss">Loss</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="col-md-6" id="earningstab">
+
+                            </div>                
+                        </div>
+                     </div>
+                </div>
+                <!-- End of Earnings tab-->
+
+
+            </div>    
+        </div>
+        
+        <!-- JavaScript on the bottom for faster page loading -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/jquery.responsiveTabs.min.js"></script>
+        <script src="js/accounting.min.js"></script>
+        <script src="js/custom.js"></script>
+	</body>
+</html>
+
+
+
+
